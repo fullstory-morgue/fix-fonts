@@ -1,0 +1,3 @@
+fix-fonts usr/sbin/
+icons /usr/share/
+*.desktop usr/share/applnk/Kanotix/Utilities/

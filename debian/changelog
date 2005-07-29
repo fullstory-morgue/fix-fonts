@@ -1,0 +1,40 @@
+fix-fonts (0.2.1) unstable; urgency=low
+
+  * optimize packaging.
+  * bump standards version.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 29 Jul 2005 21:54:40 +0200
+
+fix-fonts (0.2) unstable; urgency=low
+
+  * fix switching to kanotix-su.
+  * add support for white spaces in directory names.
+  * add -e parameter (thanks to Klaus Knopper).
+  * indent script.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 21 Jun 2005 22:34:08 +0200
+
+fix-fonts (0.1.4) unstable; urgency=low
+
+  * switch to kanotix-su. 
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 31 Mar 2005 13:56:18 +0200
+
+fix-fonts (0.1-3) unstable; urgency=low
+
+  * change packaging scheme. 
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 17 Dec 2004 12:58:22 +0100
+
+fix-fonts (0.1-2) unstable; urgency=low
+
+  * restore original file extensions for compatibility reasons. 
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 13 Nov 2004 20:37:06 +0100
+
+fix-fonts (0.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 13 Nov 2004 01:35:54 +0100
+

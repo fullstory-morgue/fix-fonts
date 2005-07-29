@@ -1,0 +1,14 @@
+Source: fix-fonts
+Section: x11
+Priority: optional
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends-Indep: @cdbs@
+Standards-Version: 3.6.2
+
+Package: fix-fonts
+Architecture: all
+Depends: ${shlibs:Depends}, xutils, fttools, kanotix-su
+Suggests: rxvt
+Description: register X fonts properly
+ This package re organizes the registered X11 fonts and should be used after
+ every update to X11 fonts.
