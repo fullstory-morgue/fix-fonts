@@ -1,5 +1,7 @@
 #!/bin/sh
 
+FONT_DIR="/usr/share/fonts /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts"
+
 if [ "$UID" -ne 0 ]; then
 	[ -x /usr/bin/kanotix-su ] && DISPLAY="" exec kanotix-su "$0" "$@"
 	
@@ -7,28 +9,30 @@ if [ "$UID" -ne 0 ]; then
 	exit 1
 fi
 
-for dir in /usr/share/fonts /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts; do
-	cd /
-	find "$dir" -name *ttf |while read x; do dirname "$x"; done|sort|uniq|while read x; do
-		echo ttf processing... "$x"
-		cd "$x"
-		rm -f encodings.dir fonts.alias fonts.dir fonts.scale
-		if [ "$1" != "-e" ]; then
-			mkttfdir
-		else
-			mkttfdir -e
-		fi
-	done
+for dir in $FONT_DIR; do
+	if [ -d "$dir" ]; then
+		cd /
+		find "$dir" -name *ttf |while read x; do dirname "$x"; done|sort|uniq|while read x; do
+			echo ttf processing... "$x"
+			cd "$x"
+			rm -f encodings.dir fonts.alias fonts.dir fonts.scale
+			if [ "$1" != "-e" ]; then
+				mkttfdir
+			else
+				mkttfdir -e
+			fi
+		done
 
-	cd /
-	find "$dir" -name *pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
-		echo pcf processing... "$x"
-		cd "$x"
-		rm -f encodings.dir fonts.alias fonts.dir fonts.scale
-		update-fonts-scale $(basename $x)
-		update-fonts-dir   $(basename $x)
-		update-fonts-alias $(basename $x)
-	done
+		cd /
+		find "$dir" -name *pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
+			echo pcf processing... "$x"
+			cd "$x"
+			rm -f encodings.dir fonts.alias fonts.dir fonts.scale
+			update-fonts-scale $(basename $x)
+			update-fonts-dir   $(basename $x)
+			update-fonts-alias $(basename $x)
+		done
+	fi
 done
 
 fc-cache -f

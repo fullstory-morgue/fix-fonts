@@ -1,3 +1,9 @@
+fix-fonts (0.2.2) unstable; urgency=low
+
+  * add modular/ FHS compatibility.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 23 Aug 2005 13:01:05 +0200
+
 fix-fonts (0.2.1) unstable; urgency=low
 
   * optimize packaging.
