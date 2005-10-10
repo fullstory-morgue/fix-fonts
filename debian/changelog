@@ -1,3 +1,9 @@
+fix-fonts (0.2.4) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 10 Oct 2005 21:20:02 +0200
+
 fix-fonts (0.2.3) unstable; urgency=low
 
   * remove preinst.
