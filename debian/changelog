@@ -1,3 +1,9 @@
+fix-fonts (0.2.5) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 14 Jan 2006 02:27:58 +0100
+
 fix-fonts (0.2.4) unstable; urgency=low
 
   * remove cdbs auto-update feature.
