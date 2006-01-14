@@ -1,8 +1,10 @@
-fix-fonts (0.2.4) UNRELEASED; urgency=low
+fix-fonts (0.2.4) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * remove cdbs auto-update feature.
+  * bump compat level to 5.
+  * add /usr/share/fonts/truetype/openoffice/, thanks to slam for noticing.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 10 Oct 2005 21:20:02 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 14 Jan 2006 02:26:06 +0100
 
 fix-fonts (0.2.3) unstable; urgency=low
 

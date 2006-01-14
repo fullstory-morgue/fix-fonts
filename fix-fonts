@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FONT_DIR="/usr/share/fonts /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts"
+FONT_DIR="/usr/share/fonts /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts /usr/share/fonts/truetype/openoffice"
 
 if [ "$UID" -ne 0 ]; then
 	[ -x /usr/bin/kanotix-su ] && DISPLAY="" exec kanotix-su "$0" "$@"
