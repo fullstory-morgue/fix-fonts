@@ -1,8 +1,10 @@
 fix-fonts (0.2.5) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * revert fix-fonts to r147 (remove special OOo handling as it is already
+    covered by xorg.conf).
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 14 Jan 2006 02:27:58 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 15 Jan 2006 02:50:26 +0100
 
 fix-fonts (0.2.4) unstable; urgency=low
 
