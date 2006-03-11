@@ -1,3 +1,9 @@
+fix-fonts (0.2.6) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 12 Mar 2006 00:14:04 +0100
+
 fix-fonts (0.2.5) unstable; urgency=low
 
   * revert fix-fonts to r147 (remove special OOo handling as it is already
