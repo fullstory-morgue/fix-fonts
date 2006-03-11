@@ -1,10 +1,10 @@
-fix-fonts (0.2.5) UNRELEASED; urgency=low
+fix-fonts (0.2.5) unstable; urgency=low
 
-  * NOT RELEASED YET
   * revert fix-fonts to r147 (remove special OOo handling as it is already
     covered by xorg.conf).
+  * bump compat level to 5.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 15 Jan 2006 02:50:26 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 12 Mar 2006 00:12:50 +0100
 
 fix-fonts (0.2.4) unstable; urgency=low
 
