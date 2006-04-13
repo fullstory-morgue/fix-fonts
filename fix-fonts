@@ -1,6 +1,8 @@
 #!/bin/sh
 
-FONT_DIR="/usr/share/fonts /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts /usr/share/fonts/truetype/openoffice"
+FONT_DIR="/usr/share/fonts /usr/share/fonts/X11 /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts /usr/share/fonts/truetype/openoffice"
+
+[ -d /usr/lib/xorg/modules ] && options="--x11r7-layout" || options=""
 
 if [ "$UID" -ne 0 ]; then
 	[ -x /usr/bin/kanotix-su ] && DISPLAY="" exec kanotix-su "$0" "$@"
@@ -28,9 +30,9 @@ for dir in $FONT_DIR; do
 			echo pcf processing... "$x"
 			cd "$x"
 			rm -f encodings.dir fonts.alias fonts.dir fonts.scale
-			update-fonts-scale $(basename $x)
-			update-fonts-dir   $(basename $x)
-			update-fonts-alias $(basename $x)
+			update-fonts-scale "$options"	$(basename $x)
+			update-fonts-dir "$options"	$(basename $x)
+			update-fonts-alias "$options" 	$(basename $x)
 		done
 	fi
 done

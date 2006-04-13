@@ -1,8 +1,9 @@
-fix-fonts (0.2.6) UNRELEASED; urgency=low
+fix-fonts (0.2.6) unstable; urgency=high
 
-  * NOT RELEASED YET
+  * adapt for pure X11R7, this update is urgent as the older versions render
+    the font informations for a pure X11R7 useless.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 12 Mar 2006 00:14:04 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 13 Apr 2006 18:15:32 +0200
 
 fix-fonts (0.2.5) unstable; urgency=low
 
