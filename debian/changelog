@@ -1,3 +1,9 @@
+fix-fonts (0.2.8) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 16 Apr 2006 22:04:00 +0200
+
 fix-fonts (0.2.7) unstable; urgency=low
 
   * fix another batch of X.org 7 compatibility issues.
