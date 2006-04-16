@@ -1,8 +1,6 @@
 #!/bin/sh
 
-FONT_DIR="/usr/share/fonts /usr/share/fonts/X11 /usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts /usr/share/fonts/truetype/openoffice"
-
-[ -d /usr/lib/xorg/modules ] && options="--x11r7-layout" || options=""
+FONT_DIR="/usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts /usr/share/fonts"
 
 if [ "$UID" -ne 0 ]; then
 	[ -x /usr/bin/kanotix-su ] && DISPLAY="" exec kanotix-su "$0" "$@"
@@ -11,13 +9,20 @@ if [ "$UID" -ne 0 ]; then
 	exit 1
 fi
 
+[ -d /usr/lib/xorg/modules ] && layout="--x11r7-layout" || layout=""
+
 for dir in $FONT_DIR; do
 	if [ -d "$dir" ]; then
+		find "$dir" -name encodings.dir -exec rm -f {} \;
+		find "$dir" -name fonts.alias -exec rm -f {} \;
+		find "$dir" -name fonts.dir -exec rm -f {} \;
+		find "$dir" -name fonts.scale -exec rm -f  {} \;
+		find "$dir" -name fonts.cache-1 -exec rm -f {} \;
 		cd /
 		find "$dir" -name *ttf |while read x; do dirname "$x"; done|sort|uniq|while read x; do
 			echo ttf processing... "$x"
 			cd "$x"
-			rm -f encodings.dir fonts.alias fonts.dir fonts.scale
+			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
 			if [ "$1" != "-e" ]; then
 				mkttfdir
 			else
@@ -29,10 +34,10 @@ for dir in $FONT_DIR; do
 		find "$dir" -name *pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
 			echo pcf processing... "$x"
 			cd "$x"
-			rm -f encodings.dir fonts.alias fonts.dir fonts.scale
-			update-fonts-scale "$options"	$(basename $x)
-			update-fonts-dir "$options"	$(basename $x)
-			update-fonts-alias "$options" 	$(basename $x)
+			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
+			update-fonts-scale $layout $(basename $x)
+			update-fonts-dir   $layout $(basename $x)
+			update-fonts-alias $layout $(basename $x)
 		done
 	fi
 done
