@@ -1,8 +1,10 @@
-fix-fonts (0.2.8) UNRELEASED; urgency=low
+fix-fonts (0.2.8) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * X11R7 is everyting we need to care of.
+  * hide bogus warning.
+  * bump standards version to 3.7.2.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 16 Apr 2006 22:04:00 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 18 Sep 2006 14:19:18 +0200
 
 fix-fonts (0.2.7) unstable; urgency=low
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FONT_DIR="/usr/X11R6/lib/X11/fonts /usr/lib/X11/fonts /usr/share/fonts"
+FONT_DIR="/usr/share/fonts"
 
 if [ "$UID" -ne 0 ]; then
 	[ -x /usr/bin/kanotix-su ] && DISPLAY="" exec kanotix-su "$0" "$@"
@@ -8,8 +8,6 @@ if [ "$UID" -ne 0 ]; then
 	echo Error: You must be root to run this script!
 	exit 1
 fi
-
-[ -d /usr/lib/xorg/modules ] && layout="--x11r7-layout" || layout=""
 
 for dir in $FONT_DIR; do
 	if [ -d "$dir" ]; then
@@ -19,7 +17,7 @@ for dir in $FONT_DIR; do
 		find "$dir" -name fonts.scale -exec rm -f  {} \;
 		find "$dir" -name fonts.cache-1 -exec rm -f {} \;
 		cd /
-		find "$dir" -name *ttf |while read x; do dirname "$x"; done|sort|uniq|while read x; do
+		find "$dir" -iname \*\.ttf | while read x; do dirname "$x"; done|sort|uniq|while read x; do
 			echo ttf processing... "$x"
 			cd "$x"
 			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
@@ -35,9 +33,10 @@ for dir in $FONT_DIR; do
 			echo pcf processing... "$x"
 			cd "$x"
 			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
-			update-fonts-scale $layout $(basename $x)
-			update-fonts-dir   $layout $(basename $x)
-			update-fonts-alias $layout $(basename $x)
+			cd ..
+			update-fonts-scale --x11r7-layout $(basename $x) 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+			update-fonts-dir   --x11r7-layout $(basename $x) 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+			update-fonts-alias --x11r7-layout $(basename $x) 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
 		done
 	fi
 done
