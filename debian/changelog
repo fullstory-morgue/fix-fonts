@@ -1,3 +1,9 @@
+fix-fonts (0.2.10) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 31 Oct 2006 23:56:02 +0100
+
 fix-fonts (0.2.9) unstable; urgency=low
 
   * switch to utf-8.
