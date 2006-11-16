@@ -1,8 +1,9 @@
-fix-fonts (0.2.10) UNRELEASED; urgency=low
+fix-fonts (0.2.10) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * use generic x-terminal-emulator support instead of harcoded application,
+    thanks to x-un-i.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 31 Oct 2006 23:56:02 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 16 Nov 2006 22:38:13 +0100
 
 fix-fonts (0.2.9) unstable; urgency=low
 
