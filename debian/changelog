@@ -1,3 +1,9 @@
+fix-fonts (0.2.12) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 19 Nov 2006 00:25:09 +0100
+
 fix-fonts (0.2.11) unstable; urgency=low
 
   * invoke $(x-terminal-emulator) through XDG.
