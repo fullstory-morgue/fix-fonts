@@ -1,8 +1,9 @@
 [Desktop Entry]
-Comment[de]=Schriften registrieren/ reparieren
-Comment[de]=Register/ repair fonts
-Exec=x-terminal-emulator -e /usr/sbin/fix-fonts
-Icon=fix-fonts
-Name[de]=Schriften registrieren (fix-fonts)
-Name=Register Fonts (fix-fonts)
 Type=Application
+Exec=/usr/sbin/fix-fonts
+Icon=fix-fonts
+Terminal=true
+Name=Register Fonts (fix-fonts)
+Name[de]=Schriften registrieren (fix-fonts)
+Comment=Register/ repair fonts
+Comment[de]=Schriften registrieren/ reparieren
