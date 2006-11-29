@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: fix-fonts
 Architecture: all
-Depends: ${shlibs:Depends}, xutils, fttools, kanotix-su
+Depends: ${shlibs:Depends}, xutils, fttools, su-me
 Suggests: xterm | x-terminal-emulator
 Description: register X fonts properly
  This package re organizes the registered X11 fonts and should be used after

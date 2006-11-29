@@ -1,9 +1,12 @@
 #!/bin/sh
+# fix-fonts is licensed under the GPL
+# (C) 2003 Jörg Schirottke <master@kanotix.com>
+# (C) 2004-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 FONT_DIR="/usr/share/fonts"
 
 if [ "$UID" -ne 0 ]; then
-	[ -x /usr/bin/kanotix-su ] && DISPLAY="" exec kanotix-su "$0" "$@"
+	[ -x /usr/bin/su-me ] && DISPLAY="" exec su-me "$0" "$@"
 	
 	echo Error: You must be root to run this script!
 	exit 1

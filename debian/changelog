@@ -1,8 +1,9 @@
-fix-fonts (0.2.12) UNRELEASED; urgency=low
+fix-fonts (0.2.12) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * use su-me instead of kanotix-su.
+  * clarify license and copyright information.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 19 Nov 2006 00:25:09 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 29 Nov 2006 18:29:00 +0100
 
 fix-fonts (0.2.11) unstable; urgency=low
 
