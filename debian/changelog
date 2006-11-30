@@ -2,7 +2,9 @@ fix-fonts (0.2.13) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 29 Nov 2006 18:30:49 +0100
+  * Initial sidux version
+
+ -- Joaquim Boura <x-un-i@sidux.com>  Thu, 30 Nov 2006 19:14:47 +0100
 
 fix-fonts (0.2.12) unstable; urgency=low
 
