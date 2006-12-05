@@ -5,7 +5,7 @@
 
 FONT_DIR="/usr/share/fonts"
 
-if [ "$UID" -ne 0 ]; then
+if [ "$(id -u)" -ne 0 ]; then
 	[ -x /usr/bin/su-me ] && DISPLAY="" exec su-me "$0" "$@"
 	
 	echo Error: You must be root to run this script!
@@ -14,32 +14,28 @@ fi
 
 for dir in $FONT_DIR; do
 	if [ -d "$dir" ]; then
-		find "$dir" -name encodings.dir -exec rm -f {} \;
-		find "$dir" -name fonts.alias -exec rm -f {} \;
-		find "$dir" -name fonts.dir -exec rm -f {} \;
-		find "$dir" -name fonts.scale -exec rm -f  {} \;
-		find "$dir" -name fonts.cache-1 -exec rm -f {} \;
+		find "$dir" -name encodings.dir	-exec rm -f {} \;
+		find "$dir" -name fonts.alias	-exec rm -f {} \;
+		find "$dir" -name fonts.dir	-exec rm -f {} \;
+		find "$dir" -name fonts.scale	-exec rm -f {} \;
+		find "$dir" -name fonts.cache-1	-exec rm -f {} \;
 		cd /
 		find "$dir" -iname \*\.ttf | while read x; do dirname "$x"; done|sort|uniq|while read x; do
 			echo ttf processing... "$x"
 			cd "$x"
 			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
-			if [ "$1" != "-e" ]; then
-				mkttfdir
-			else
-				mkttfdir -e
-			fi
+			mkttfdir -e
 		done
 
 		cd /
-		find "$dir" -name *pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
+		find "$dir" -iname *.pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
 			echo pcf processing... "$x"
 			cd "$x"
 			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
 			cd ..
-			update-fonts-scale --x11r7-layout $(basename $x) 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-			update-fonts-dir   --x11r7-layout $(basename $x) 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-			update-fonts-alias --x11r7-layout $(basename $x) 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+			update-fonts-scale --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+			update-fonts-dir   --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+			update-fonts-alias --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
 		done
 	fi
 done
