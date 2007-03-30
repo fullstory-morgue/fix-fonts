@@ -1,12 +1,12 @@
-fix-fonts (0.2.14) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+fix-fonts (0.2.14) unstable; urgency=low
 
   [ Joaquim Boura ]
   * moving to xdg-menus
 
- -- Joaquim Boura <x-un-i@sidux.com>  Wed, 28 Mar 2007 21:37:14 +0200
+  [ Stefan Lippers-Hollmann ]
+  * fix *.desktop location.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 31 Mar 2007 01:49:03 +0200
 
 fix-fonts (0.2.13) unstable; urgency=low
 
