@@ -1,8 +1,8 @@
-fix-fonts (0.2.15) UNRELEASED; urgency=low
+fix-fonts (0.2.15) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * depend on sidux-xdg.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 31 Mar 2007 01:50:24 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 31 Mar 2007 01:51:12 +0200
 
 fix-fonts (0.2.14) unstable; urgency=low
 
