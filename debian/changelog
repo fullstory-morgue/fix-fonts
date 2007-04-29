@@ -1,9 +1,5 @@
-fix-fonts (0.2.16) UNRELEASED; urgency=low
+fix-fonts (0.2.16) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Joaquim Boura ]
   * new icon sidux-fonts
 
  -- Joaquim Boura <x-un-i@sidux.com>  Sun, 29 Apr 2007 20:43:45 +0200
