@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Exec=/usr/sbin/fix-fonts
+Exec=x-terminal-emulator -e /usr/sbin/fix-fonts
 Icon=sidux-fonts
 Name=Register Fonts (fix-fonts)
 Comment=Register/ repair fonts
