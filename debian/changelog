@@ -1,3 +1,9 @@
+fix-fonts (0.2.19) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 16 Jun 2007 03:39:54 +0200
+
 fix-fonts (0.2.18) unstable; urgency=low
 
   * Add debian menu. Build-Depend on imagemagick.
