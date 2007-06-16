@@ -1,4 +1,4 @@
-fix-fonts (0.2.18) UNRELEASED; urgency=low
+fix-fonts (0.2.18) unstable; urgency=low
 
   * Add debian menu. Build-Depend on imagemagick.
   * Remove versioned depends on cdbs, relax debhelper version.
