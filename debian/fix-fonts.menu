@@ -1,4 +1,5 @@
-?package(fix-fonts):needs="text" \
+?package(fix-fonts): \
+	needs="X11" \
 	section="Apps/System" \
 	hints="sidux,Config" \
 	title="Register Fonts" \

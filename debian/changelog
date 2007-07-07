@@ -1,8 +1,8 @@
-fix-fonts (0.2.19) UNRELEASED; urgency=low
+fix-fonts (0.2.19) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix debian menu.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 16 Jun 2007 03:39:54 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 07 Jul 2007 15:37:22 +0200
 
 fix-fonts (0.2.18) unstable; urgency=low
 
