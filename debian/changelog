@@ -3,8 +3,9 @@ fix-fonts (0.2.20) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * add VCS control headers.
   * update syntax for Vcs headers in debian/control
+  * Update debian menu section as per new subpolicy.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 07 Oct 2007 14:39:54 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 25 Oct 2007 22:12:03 +1000
 
 fix-fonts (0.2.19) unstable; urgency=low
 

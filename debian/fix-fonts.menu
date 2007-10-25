@@ -1,6 +1,6 @@
 ?package(fix-fonts): \
 	needs="X11" \
-	section="Apps/System" \
+	section="Applications/System/Administration" \
 	hints="sidux,Config" \
 	title="Register Fonts" \
 	icon32x32="/usr/share/pixmaps/fix-fonts.xpm" \
