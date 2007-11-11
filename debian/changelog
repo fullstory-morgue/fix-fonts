@@ -1,3 +1,9 @@
+fix-fonts (0.2.22) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 11 Nov 2007 12:03:17 +0100
+
 fix-fonts (0.2.21) unstable; urgency=low
 
   * mkfontdir in /usr/share/fonts/X11/encodings/ and
