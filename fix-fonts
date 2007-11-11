@@ -1,7 +1,7 @@
 #!/bin/sh
 # fix-fonts is licensed under the GPL
 # (C) 2003 Jörg Schirottke <master@kanotix.com>
-# (C) 2004-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# (C) 2004-2007 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 FONT_DIR="/usr/share/fonts"
 
@@ -12,33 +12,39 @@ if [ "$(id -u)" -ne 0 ]; then
 	exit 1
 fi
 
-for dir in $FONT_DIR; do
-	if [ -d "$dir" ]; then
-		find "$dir" -name encodings.dir	-exec rm -f {} \;
-		find "$dir" -name fonts.alias	-exec rm -f {} \;
-		find "$dir" -name fonts.dir	-exec rm -f {} \;
-		find "$dir" -name fonts.scale	-exec rm -f {} \;
-		find "$dir" -name fonts.cache-1	-exec rm -f {} \;
-		cd /
-		find "$dir" -iname \*\.ttf | while read x; do dirname "$x"; done|sort|uniq|while read x; do
-			echo ttf processing... "$x"
-			cd "$x"
-			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
-			mkttfdir -e
-		done
+if [ -d "$FONT_DIR" ]; then
+	find "$FONT_DIR" -name encodings.dir	-exec rm -f {} \;
+	find "$FONT_DIR" -name fonts.alias	-exec rm -f {} \;
+	find "$FONT_DIR" -name fonts.dir	-exec rm -f {} \;
+	find "$FONT_DIR" -name fonts.scale	-exec rm -f {} \;
+	find "$FONT_DIR" -name fonts.cache-1	-exec rm -f {} \;
+	cd /
+	find "$FONT_DIR" -iname \*\.ttf | while read x; do dirname "$x"; done|sort|uniq|while read x; do
+		echo ttf processing... "$x"
+		cd "$x"
+		rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
+		mkttfdir -e
+	done
 
-		cd /
-		find "$dir" -iname *.pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
-			echo pcf processing... "$x"
-			cd "$x"
-			rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
-			cd ..
-			update-fonts-scale --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-			update-fonts-dir   --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-			update-fonts-alias --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-		done
-	fi
-done
+	cd /
+	find "$FONT_DIR" -iname *.pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
+		echo pcf processing... "$x"
+		cd "$x"
+		rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
+		cd ..
+		update-fonts-scale --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+		update-fonts-dir   --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+		update-fonts-alias --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+	done
+fi
+
+if [ -d "${FONT_DIR}/X11/encodings" ] && [ -d "${FONT_DIR}/X11/encodings/large" ]; then
+	mkfontdir	-e "${FONT_DIR}/X11/encodings/./" \
+			-e "${FONT_DIR}/X11/encodings/large" \
+				"${FONT_DIR}/X11/encodings"
+	mkfontdir	-e "${FONT_DIR}/X11/encodings//large/./" \
+				"${FONT_DIR}/X11/encodings/large"
+fi
 
 fc-cache -f
 
