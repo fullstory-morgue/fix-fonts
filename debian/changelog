@@ -1,6 +1,5 @@
-fix-fonts (0.2.22) UNRELEASED; urgency=low
+fix-fonts (0.2.22) unstable; urgency=low
 
-  * NOT RELEASED YET
   * update to Standards-Version 3.7.3, no changes necessary.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 03 Dec 2007 13:46:59 +0100
