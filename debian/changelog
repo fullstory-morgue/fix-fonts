@@ -1,3 +1,9 @@
+fix-fonts (0.2.23) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 08 Dec 2007 16:55:41 +0100
+
 fix-fonts (0.2.22) unstable; urgency=low
 
   * update to Standards-Version 3.7.3, no changes necessary.
