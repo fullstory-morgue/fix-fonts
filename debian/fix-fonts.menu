@@ -5,4 +5,4 @@
 	title="Register Fonts" \
 	icon32x32="/usr/share/pixmaps/fix-fonts.xpm" \
 	icon16x16="/usr/share/pixmaps/fix-fonts-16.xpm" \
-	command="/usr/sbin/fix-fonts"
+	command="su-to-root -c /usr/sbin/fix-fonts"

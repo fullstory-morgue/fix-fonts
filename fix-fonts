@@ -1,14 +1,13 @@
 #!/bin/sh
 # fix-fonts is licensed under the GPL
 # (C) 2003 Jörg Schirottke <master@kanotix.com>
-# (C) 2004-2007 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# (C) 2004-2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 FONT_DIR="/usr/share/fonts"
 
 if [ "$(id -u)" -ne 0 ]; then
-	[ -x /usr/bin/su-me ] && DISPLAY="" exec su-me "$0" "$@"
-	
-	echo Error: You must be root to run this script!
+	[ -x "$(which su-to-root)" ] && exec su-to-root -X -c "$0" "$@"
+	printf "ERROR: $0 needs root capabilities, please start it as root.\n\n" >&2
 	exit 1
 fi
 
