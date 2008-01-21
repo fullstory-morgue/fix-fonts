@@ -3,6 +3,6 @@
 	section="Applications/System/Administration" \
 	hints="sidux,Config" \
 	title="Register Fonts" \
-	icon32x32="/usr/share/pixmaps/fix-fonts.xpm" \
-	icon16x16="/usr/share/pixmaps/fix-fonts-16.xpm" \
+	icon32x32="/usr/share/pixmaps/sidux-fonts.xpm" \
+	icon16x16="/usr/share/pixmaps/sidux-fonts-16.xpm" \
 	command="su-to-root -c /usr/sbin/fix-fonts"
