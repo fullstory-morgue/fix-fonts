@@ -1,3 +1,4 @@
-fix-fonts	usr/sbin/
-icons		usr/share/
-*.desktop	usr/share/applications/sidux/
+fix-fonts		usr/sbin/
+fix-fonts.desktop	usr/share/applications/sidux/
+icons/hicolor		usr/share/icons/
+icons/pixmaps		usr/share/

@@ -18,12 +18,12 @@ create-icons::
 		mkdir -p "icons/hicolor/$${i}x$${i}/apps" ; \
 		inkscape --export-width=$${i} \
 			 --export-height=$${i} \
-			 --export-png="$(CURDIR)/icons/hicolor/$${i}x$${i}/apps/sidux-fonts.png" \
-				$(CURDIR)/icons/sidux-fonts.svg ; \
+			 --export-png="$(CURDIR)/icons/hicolor/$${i}x$${i}/apps/fix-fonts.png" \
+				$(CURDIR)/icons/fix-fonts.svg ; \
 	done
 	
 	# create XPM icons for the debian menu system
 	mkdir -p icons/pixmaps
-	convert icons/hicolor/32x32/apps/sidux-fonts.png icons/pixmaps/sidux-fonts.xpm
-	convert icons/hicolor/16x16/apps/sidux-fonts.png icons/pixmaps/sidux-fonts-16.xpm
+	convert icons/hicolor/32x32/apps/fix-fonts.png icons/pixmaps/fix-fonts.xpm
+	convert icons/hicolor/16x16/apps/fix-fonts.png icons/pixmaps/fix-fonts-16.xpm
 
