@@ -3,9 +3,18 @@ Sat, 13 Nov 2004 00:44:07 +0100.
 
 It was downloaded from http://sidux.com/
 
-Upstream author is Copyright Jörg Schirottke <master@kanotix.com>
+Files: *
+Copyright: (C) 2003 Jörg Schirottke <master@kanotix.com>
+           (C) 2004-2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+License: GPL-2
+  The fix-fonts program is licensed under the GNU General Public License,
+  version 2.
 
-Copyright: GPL, see /usr/share/common-licenses
+Files: debian/*
+Copyright: (C) 2005-2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+License: GPL-2
+  The Debian packaging information is licensed under the GNU General
+  Public License, version 2.
 
 Files: icons/*
 Copyright: (C) 2008 Bernard Gray <bernard.gray@gmail.com>
