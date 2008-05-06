@@ -1,8 +1,9 @@
-fix-fonts (0.3.6) UNRELEASED; urgency=low
+fix-fonts (0.3.6) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch to the new dh implementation of debhelper 7.
+  * imagemagick is no hard build-dependency.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 20 Feb 2008 22:07:47 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 07 May 2008 01:03:46 +0200
 
 fix-fonts (0.3.5) unstable; urgency=low
 
