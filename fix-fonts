@@ -17,23 +17,14 @@ if [ -d "$FONT_DIR" ]; then
 	find "$FONT_DIR" -name fonts.dir	-exec rm -f {} \;
 	find "$FONT_DIR" -name fonts.scale	-exec rm -f {} \;
 	find "$FONT_DIR" -name fonts.cache-1	-exec rm -f {} \;
-	cd /
-	find "$FONT_DIR" -iname \*\.ttf | while read x; do dirname "$x"; done|sort|uniq|while read x; do
-		echo ttf processing... "$x"
-		cd "$x"
-		rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
-		ttmkfdir --font-dir .
-	done
 
 	cd /
-	find "$FONT_DIR" -iname *.pcf.gz|while read x; do dirname "$x"; done|sort|uniq|while read x; do
-		echo pcf processing... "$x"
+	find "$FONT_DIR" -iname *.pcf.gz -o -iname \*\.ttf | while read x; do dirname "$x"; done|sort|uniq|while read x; do
+		echo "font processing... $x"
 		cd "$x"
 		rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
 		cd ..
-		update-fonts-scale --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-		update-fonts-dir   --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
-		update-fonts-alias --x11r7-layout "$(basename $x)" 2>&1 | grep -v "warning\: .* does not exist or is not a directory"
+		mkfontdir -r -- .
 	done
 fi
 

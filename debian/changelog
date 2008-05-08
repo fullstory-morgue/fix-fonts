@@ -2,10 +2,10 @@ fix-fonts (0.4.0) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
   * UNTESTED, use at your own risk on experimental systems!
-  * move from fttols (freetype1) to ttmkfdir (freetype6), as fttols/ freetype1
+  * move from fttols (freetype1) to mkfontdir (freetype6), as fttols/ freetype1
     are being dropped from Debian.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 09 May 2008 00:51:29 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 09 May 2008 01:09:13 +0200
 
 fix-fonts (0.3.6) unstable; urgency=low
 
