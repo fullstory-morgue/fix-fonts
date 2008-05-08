@@ -9,7 +9,7 @@ Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/fix-fonts/trunk/
 
 Package: fix-fonts
 Architecture: all
-Depends: xutils, fttools
+Depends: xutils, ttmkfdir
 Recommends: menu
 Suggests: xterm | x-terminal-emulator
 Description: register X fonts properly

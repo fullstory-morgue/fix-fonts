@@ -22,7 +22,7 @@ if [ -d "$FONT_DIR" ]; then
 		echo ttf processing... "$x"
 		cd "$x"
 		rm -f encodings.dir fonts.alias fonts.dir fonts.scale fonts.cache-1
-		mkttfdir -e
+		ttmkfdir --font-dir .
 	done
 
 	cd /
