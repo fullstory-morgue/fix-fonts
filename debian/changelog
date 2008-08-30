@@ -1,12 +1,14 @@
-fix-fonts (0.4.0) UNRELEASED; urgency=low
+fix-fonts (0.4.0) UNTESTED; urgency=low
 
   * NOT RELEASED YET
   * UNTESTED, use at your own risk on experimental systems!
   * move from fttols (freetype1) to mkfontdir (freetype6), as fttols/ freetype1
     are being dropped from Debian.
   * bump standards version to 3.8.0, no changes necessary.
+  * Use Terminal=true (instead of yes) in ceni.desktop to fix issue on
+    XFCE. Thanks to x-un-i and kelmo.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Jun 2008 15:40:33 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 30 Aug 2008 03:08:45 +0200
 
 fix-fonts (0.3.6) unstable; urgency=low
 

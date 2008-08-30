@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Type=Application
 Exec=su-to-root -c /usr/sbin/fix-fonts
-Terminal=yes
+Terminal=true
 Icon=fix-fonts
 Name=Register Fonts (fix-fonts)
 Name[de]=Schriften registrieren (fix-fonts)
