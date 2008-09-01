@@ -1,6 +1,8 @@
-fix-fonts (0.4.0) UNTESTED; urgency=low
+fix-fonts (0.4.0) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * OPRHAN PACKAGE, doesn't work since more than one release, doesn't seem 
+    to be missed.
   * UNTESTED, use at your own risk on experimental systems!
   * move from fttols (freetype1) to mkfontdir (freetype6), as fttols/ freetype1
     are being dropped from Debian.
@@ -8,7 +10,7 @@ fix-fonts (0.4.0) UNTESTED; urgency=low
   * Use Terminal=true (instead of yes) in ceni.desktop to fix issue on
     XFCE. Thanks to x-un-i and kelmo.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 30 Aug 2008 03:08:45 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 01 Sep 2008 23:18:00 +0200
 
 fix-fonts (0.3.6) unstable; urgency=low
 
