@@ -9,6 +9,7 @@ fix-fonts (0.4.0) ORPHANED; urgency=low
   * bump standards version to 3.8.0, no changes necessary.
   * Use Terminal=true (instead of yes) in ceni.desktop to fix issue on
     XFCE. Thanks to x-un-i and kelmo.
+  * refresh SVG graphics, shut up inkscape's migration from old versions.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 01 Sep 2008 23:18:00 +0200
 
